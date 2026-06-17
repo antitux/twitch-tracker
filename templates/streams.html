@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Antitux's Twitch Tracker - {{ count }} Stream{{ 's' if count != 1 else '' }} Live{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/streams.css') }}?v={{ cache_bust }}">
+<style>
+    .header {
+        {% if hide_header %}display: none;{% endif %}
+    }
+    .streams-container {
+        height: {% if hide_header %}100vh{% else %}calc(100vh - 51px){% endif %};
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="header">
+    <div class="title">Antitux's Twitch Tracker: 🔴 {{ count }} Stream{{ 's' if count != 1 else '' }} Live</div>
+    <div class="status" id="status">
+        Next check in <span id="timer">60</span>s
+    </div>
+</div>
+
+<div class="streams-container" id="streams-container">
+    {% for username in usernames %}
+    <div class="stream">
+        <div class="stream-label">{{ username }}</div>
+        <iframe
+            src="https://player.twitch.tv/?channel={{ username }}&parent={{ parent_domain }}&muted=true&quality=480p"
+            allowfullscreen>
+        </iframe>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    window.STREAM_DATA = {
+        usernames: {{ usernames|tojson }},
+        count: {{ count }},
+        hideHeader: {{ 'true' if hide_header else 'false' }}
+    };
+</script>
+<script src="{{ url_for('static', filename='js/streams.js') }}?v={{ cache_bust }}"></script>
+{% endblock %}

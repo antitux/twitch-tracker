@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Antitux's Twitch Tracker - No Streams Live{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/no_streams.css') }}?v={{ cache_bust }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="icon">📺</div>
+    <div class="status">No Streams Live</div>
+    <div class="message">
+        None of your followed channels are currently streaming.
+    </div>
+    <div class="countdown">
+        <span class="spinner"></span>
+        Checking for live streams... <span id="timer">60</span>s
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/no_streams.js') }}?v={{ cache_bust }}"></script>
+{% endblock %}

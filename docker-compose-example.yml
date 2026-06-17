@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  twitch-tracker:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      # Get these from twitchtokengenerator.com
+      - CLIENT_ID=YOUR_CLIENT_ID
+      - ACCESS_TOKEN=YOUR_CLIENT_TOKEN
+      - USER_ID=YOUR_USER_ID
+      # The domain the server is available on
+      - PARENT_DOMAIN=localhost
+    restart: unless-stopped
