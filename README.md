@@ -12,6 +12,7 @@ A Flask-based web application that displays all your followed Twitch streams in 
 
 ## Prerequisites
 
+- **For best results, use Firefox!!**
 - Docker and Docker Compose (recommended)
 - OR Python 3.11+ (for local development)
 - Twitch account with:
