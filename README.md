@@ -236,18 +236,18 @@ firefox --kiosk --new-window http://localhost:5000/?hide_header=true
 ### Auto-refresh not working
 
 - Check browser console for errors
-- Ensure the app can reach /api/live-streams
+- Ensure the app can reach `/api/live-streams`
 - Verify your OAuth token hasn't expired
 
 ### "No streams live" when streams are active
 
-- Confirm your USER_ID is correct
-- Check that your OAuth token has the user:read:follows scope
+- Confirm your `USER_ID` is correct
+- Check that your OAuth token has the `user:read:follows` scope
 - Verify you're actually following the streamers on Twitch
 
 ### Template not found errors
 
-- Ensure templates/ and static/ directories are copied correctly
+- Ensure `templates/` and `static/` directories are copied correctly
 - Check Docker build logs for copy errors
 - Verify file permissions
 
@@ -256,9 +256,9 @@ firefox --kiosk --new-window http://localhost:5000/?hide_header=true
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 1. Fork the repository
-1. Create your feature branch (git checkout -b feature/AmazingFeature)
-1. Commit your changes (git commit -m 'Add some AmazingFeature')
-1. Push to the branch (git push origin feature/AmazingFeature)
+1. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+1. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+1. Push to the branch (`git push origin feature/AmazingFeature`)
 1. Open a Pull Request
 
 ## License
