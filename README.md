@@ -203,7 +203,6 @@ The app automatically calculates the optimal grid based on stream count:
 ### Streams not autoplaying
 - Firefox is the recommended browser for the best experience with this application
 - Some browsers may block autoplay by default due to their autoplay policies
-
 - For a fullscreen kiosk experience, run Firefox in kiosk mode:
 ```bash
 firefox --kiosk http://localhost:5000/?hide_header=true
