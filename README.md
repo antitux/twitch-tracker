@@ -61,7 +61,7 @@ PARENT_DOMAIN=yourdomain.com
 
 3. **Run with docker-compose:**
 ```bash
-docker-compose up -d
+docker-compose -f docker-compose-example.yml up -d
 ```
 
 4. **Access the app:**
