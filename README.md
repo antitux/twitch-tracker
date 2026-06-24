@@ -146,21 +146,28 @@ https://localhost:5000/?hide_header=true
 
 ```
 twitch-tracker/
-├── app.py # Main Flask application
-├── requirements.txt # Python dependencies
-├── Dockerfile # Docker configuration
-├── docker-compose.yml # Docker Compose configuration
-├── templates/
-│ ├── base.html # Base template
-│ ├── streams.html # Multi-stream view
-│ └── no_streams.html # No streams view
-└── static/
-├── css/
-│ ├── streams.css
-│ └── no_streams.css
-└── js/
-├── streams.js
-└── no_streams.js
+├── app.py                          # Main Flask application
+├── requirements.txt                # Python dependencies
+├── Dockerfile                      # Docker configuration
+├── docker-compose.yml              # Docker Compose configuration
+├── templates/                      # Templates
+│ ├── base.html                     # Base template
+│ ├── streams.html                  # Multi-stream view
+│ └── no_streams.html               # No streams view
+└── scripts/                        # Helper scripts for running Firefox on Ubuntu Desktop in kiosk mode.
+│ └── README.md                     # Helper Scripts README.md
+│ └── firefox_desktop_restart.sh    # Restarts Firefox remotely
+│ └── firefox_reload.py             # Refreshes Firefox via Marionette api
+│ └── firefox.desktop               # Automatically launches Firefox on boot
+│ └── xhost.desktop                 # Enables remote X11 sessions
+└── static/                         # Static CSS and Javascript
+  ├── css/                          # Static CSS Files
+  │ ├── streams.css                 # CSS for when streams are live
+  │ └── no_streams.css              # CSS For when streams are not live
+  └── js/                           # Static Javascript Files
+  ├── streams.js                    # Javascript for when streams are live
+  └── no_streams.js                 # Javascript for when streams are not live
+
 ```
 
 ## How It Works
