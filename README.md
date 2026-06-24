@@ -110,14 +110,19 @@ version: '3.8'
 
 services:
   twitch-tracker:
-    build: .
+    image: antitux/twitch-tracker:latest
+    pull_policy: always
+    container_name: twitch-tracker
     ports:
       - "5000:5000"
     environment:
-      - CLIENT_ID=${CLIENT_ID}
-      - ACCESS_TOKEN=${ACCESS_TOKEN}
-      - USER_ID=${USER_ID}
-      - PARENT_DOMAIN=yourdomain.com
+      # Get these from twitchtokengenerator.com
+      - CLIENT_ID=YOUR_CLIENT_ID
+      - ACCESS_TOKEN=YOUR_CLIENT_TOKEN
+      - USER_ID=YOUR_USER_ID
+      # The domain the server is available on.
+      # Use localhost if just running locally.
+      - PARENT_DOMAIN=localhost
     restart: unless-stopped
 ```
 
