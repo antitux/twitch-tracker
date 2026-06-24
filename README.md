@@ -184,18 +184,18 @@ JSON API endpoint that returns current live streams
 
 The app automatically calculates the optimal grid based on stream count:
 
-- 1 stream: 1×1
-- 2 streams: 2×1
-- 3 streams: 3×1
-- 4 streams: 2×2
-- 5-6 streams: 3×2
-- 7-9 streams: 3×3
-- 10-12 streams: 4×3
-- 13-16 streams: 4×4
-- 17-20 streams: 5×4
-- 21-25 streams: 5×5
-- 26-30 streams: 6×5
-- 31-36 streams: 6×6
+- 1 stream: 1x1
+- 2 streams: 2x1
+- 3 streams: 3x1
+- 4 streams: 2x2
+- 5-6 streams: 3x2
+- 7-9 streams: 3x3
+- 10-12 streams: 4x3
+- 13-16 streams: 4x4
+- 17-20 streams: 5x4
+- 21-25 streams: 5x5
+- 26-30 streams: 6x5
+- 31-36 streams: 6x6
 - 36+ streams: Calculated dynamically
 
 ## Troubleshooting
