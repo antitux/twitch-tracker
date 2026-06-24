@@ -9,10 +9,17 @@ A Flask-based web application that displays all your followed Twitch streams in 
 - **Responsive grid layout** - Dynamically adjusts grid based on number of active streams
 - **Sorted by viewers** - Streams are ordered by viewer count (highest first)
 - **Docker support** - Easy deployment with Docker/docker-compose
+- **NOTE: <span style="color:red;"><u>FOR THE BEST RESULTS, USE A FIREFOX-BASED BROWSER!! CHROME-BASED BROWSERS DO NOT LIKE TO AUTOPLAY LARGE NUMBERS OF VIDEOS AT ONCE!!</u></span>**
+## Screenshots
+
+**Multiple streams with header:**
+![Streams with header](screenshots/screenshot-with-header.png)
+
+**Fullscreen mode (header hidden):**
+![Streams without header](screenshots/screenshot-without-header.png)
 
 ## Prerequisites
 
-- **For best results, use Firefox!!**
 - Docker and Docker Compose (recommended)
 - OR Python 3.11+ (for local development)
 - Twitch account with:
